@@ -51,3 +51,13 @@ CREATE TABLE invoices(
     totalamount NUMERIC (10,2),
     paymentdate TIME
 )
+
+CREATE TABLE mediacators(
+    recordid INT PRIMARY KEY,
+    animalid FOREIGN KEY,
+    recordid TIMESTAMP,
+    doctorid FOREIGN KEY,
+    diagnosis TEXT,
+    prescription TEXT,
+    notes TEXT
+)
