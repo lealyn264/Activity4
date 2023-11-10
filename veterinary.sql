@@ -31,7 +31,7 @@ CREATE TABLE appointments (
 );
 
 CREATE TABLE doctors(
-    doctorid INT PRIMARY KEY,
+    doctorid c
     dfirstname VARCHAR(50),
     dlastname VARCHAR(50),
     specialty VARCHAR(100),
@@ -42,4 +42,12 @@ CREATE TABLE doctors(
 CREATE TABLE treatments (
     treatmentid INT PRIMARY KEY,
     phonenumber VARCHAR(15),
+);
+
+
+CREATE TABLE invoices(
+    invoiceid INT PRIMARY KEY,
+    appointid INT FOREIGN KEY,
+    totalamount NUMERIC (10,2),
+    paymentdate TIME
 )
